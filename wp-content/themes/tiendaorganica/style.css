@@ -1,0 +1,292 @@
+/*
+    Theme Name: Tienda Organica
+    Theme URI:
+    Author: Erik Jonathan Manzano Morales
+    Author URI:
+    Description: Tema para proyecto de una tienda con productos organicos
+    Version: 1.0
+    License: GNU General Public License v2 or Later
+    License URI: http://www.gnu.org/licenses/gpl-3.0.html
+    Text Domain: tiendaorganica
+*/
+
+/** VARIABLES **/
+:root {
+    --primario: #379237;
+    --primarioOscuro: #287028;
+    --secundario: #7bac6c;
+    --gris: #DDDDDD;
+    --grisClaro: #EEEEEE;
+    --blanco: #FFF;
+    --negro: #000;
+    --grisOscuro: #303030;
+    --fuenteParrafos: sans-serif;
+}
+
+/** ELEMENTOS HTML **/
+html {
+    overflow-x: hidden;
+}
+body {
+    font-family: var(--fuenteParrafos);
+    color: var(--grisOscuro);
+}
+p {
+    font-weight: 300;
+    line-height: 2rem;
+    font-size: 1.1rem;
+}
+h2 {
+    font-size: 2.3rem;
+}
+.wpcf7-form-control-warp,
+.form-group label {
+    width: 100%;
+}
+
+/**Navbar Items **/
+.nav-link {
+    color: var(--negro);
+    font-weight: 700;
+}
+.nav-link:hover {
+    color: var(--primario);
+}
+
+.current_page_item .nav-link {
+    color: var(--primario)!important;
+    border-bottom: 2px solid var(--primario);
+}
+.bg-light {
+    background-color: var(--blanco)!important;
+}
+
+
+/** Buttons **/
+.btn-primary {
+    background-color: var(--primario);
+    border-color: var(--primario);
+}
+.btn-primary:hover {
+    background-color: var(--primarioOscuro);
+    border-color: var(--primarioOscuro);
+}
+.text-light {
+    color: var(--blanco)!important;
+}
+
+
+/** Elementos reusables **/
+.bg-primary { /* Color para bloques de contenido */
+    background-color: var(--primario)!important;
+}
+.bg-secondary {
+    background-color: var(--secundario)!important;
+}
+
+/** Inicio **/
+.imagen > div { /* Tamaño para dispositivos moviles */
+    height: 30rem;
+}
+@media (min-width:768px) { /* Tamaño desktop */
+    .imagen > div {
+        height: 45rem;
+    }
+}
+.imagen-fondo {
+    background-size: cover;
+    background-position: top center;
+}
+
+.imagen-superior .contenido {
+    border-top: 1px solid var(--blanco);
+    border-bottom: 1px solid var(--blanco);
+}
+.imagen-inferior .contenido {
+    border-top: 1px solid var(--negro);
+    border-bottom: 1px solid var(--negro);
+}
+@media (min-width:768px) { /* Orden de las imagenes en dispositivos moviles */
+    .imagen-inferior .bg-secondary {
+        order: 2;
+    }
+}
+
+body.home .productos {
+    background-color: var(--blanco);
+}
+
+/** Background Images **/
+.imagen-destacada {
+    height: 28rem;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.destacada {
+    margin-top: -10rem;
+}
+.no-destacada {
+    margin-top: 0!important;
+    border: none!important;
+}
+
+/* Logo */
+.logo {
+    transform: scale(.9);
+}
+
+/** Nosotros **/
+.contenido-pagina {
+    border: 1px solid #e1e1e1;
+    position: relative;
+    z-index: 100;
+}
+.nosotros .informacion h3 {
+    font-weight: 300;
+    font-size: 1.6rem;
+}
+.nosotros .informacion .icono-nosotros {
+    margin: 0 auto;
+    transform: scale(.5);
+}
+.nosotros {
+    border-bottom: 1px solid var(--grisClaro);
+}
+/* Productos */
+.badge-secondary {
+    background-color: #c7c57d;
+    color: var(--negro);
+    font-size: .75rem;
+}
+.card {
+    margin-bottom: 2rem;
+}
+.titulo-producto {
+    font-weight: 700;
+    color: var(--negro);
+}
+.card-subtitle {
+    color: var(--primarioOscuro);
+    font-weight: 700;
+}
+
+/* Footer */
+.pedidos {
+    background-size: cover;
+    background-position: top center;
+}
+.pedidos .row {
+    height: 48rem;
+}
+.pedidos .contenido h2 {
+    font-weight: 700;
+    font-size: 2.4rem;
+}
+
+.copyright {
+    font-weight: bold;
+}
+.footer {
+    border-bottom: 10px solid var(--primario);
+}
+
+/** Galeria **/
+#galeria .col-lg-4 {
+    margin: 0 !important;
+    padding: 25px;
+}
+#galeria img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Pagina 404 */
+.imagen-404 {
+    transform: scale(.5);
+}
+
+/** Pagina individual de producto*/
+.woocommerce div.product {
+    margin-top: 5rem!important;
+}
+
+
+/* Woocommerce Variables */
+.button{
+    background-color: var(--primario)!important;
+    color: var(--blanco)!important;
+}
+
+/** Pagina de todos los productos */
+
+
+
+/* Sobreescribir selector -Ordenar por- */
+select.orderby {
+    -moz-appearance: none!important;
+    -webkit-appearance: none!important;
+    appearance: none!important;
+    background: transparent!important;
+    border: none!important;
+    font-size: 14px!important;
+    height: 30px!important;
+    padding: 5px!important;
+    width: 250px!important;
+    max-width: none!important;
+}
+select.orderby:focus {
+    outline: none!important;
+}
+.woocommerce-ordering {
+    padding: 0!important;
+    border:1px solid var(--primario)!important;
+    height:30px!important;
+    width: 230px!important;
+    overflow: hidden!important;
+    position:relative!important;
+ }
+.woocommerce-ordering::after{
+    content:"\025be"!important;
+    color:var(--blanco)!important;
+    display:table-cell!important;
+    text-align:center!important;
+    width:30px!important;
+    height:30px!important;
+    background-color:var(--primario)!important;
+    position:absolute!important;
+    top:0!important;
+    right:0px!important;
+    pointer-events: none!important;
+}
+
+.woocommerce div.product .product_title {
+    color: var(--primarioOscuro)!important;
+    font-weight: bold!important;
+    line-height: 1!important;
+   } 
+
+.woocommerce ul.products li.product .price {
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+.woocommerce 
+ul.products 
+li.product 
+.woocommerce-loop-category__title, 
+.woocommerce ul.products li.product 
+.woocommerce-loop-product__title, 
+.woocommerce 
+ul.products 
+li.product h3 {
+    color: var(--primarioOscuro);
+    font-weight: 700;
+}
+
+.woocommerce ul.products li.product .button {
+    display: flex!important;
+    justify-content: center!important;
+}

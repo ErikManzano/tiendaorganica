@@ -1,0 +1,1 @@
+<h2>Hola mundo desde single_product</h2>
